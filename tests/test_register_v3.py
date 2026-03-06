@@ -150,14 +150,14 @@ def run_registerAttempt(attempt_num):
             except:
                 pass
             
-            # 等待一下让页面反应
-            page.wait_for_timeout(500)
+            # 等待注册按钮出现
+            page.wait_for_selector('.login-container-body-E-btn', timeout=10000)
             
             # ===== 步骤4: 点击注册 =====
             print("\n[步骤4] 点击注册...")
-            # 先尝试直接按回车键提交（最可靠）
-            page.keyboard.press('Enter')
-            page.wait_for_timeout(2000)
+            # 使用 JavaScript 点击 DIV 按钮
+            page.evaluate("() => { document.querySelector('.login-container-body-E-btn').click(); }")
+            page.wait_for_timeout(3000)
 
             page.wait_for_timeout(10000)
 
