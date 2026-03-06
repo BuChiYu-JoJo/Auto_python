@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付方式测试报告</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .summary {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary-card .value {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .passed { color: green; }
+        .failed { color: red; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>💳 支付方式调起测试报告</h1>
+    </div>
+    
+    <div class="summary">
+        <div class="summary-card">
+            <div class="value passed">✅ 2</div>
+            <div>通过</div>
+        </div>
+        <div class="summary-card">
+            <div class="value failed">❌ 0</div>
+            <div>失败</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">2</div>
+            <div>总计</div>
+        </div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>支付方式</th>
+                <th>测试结果</th>
+                <th>弹窗类型</th>
+                <th>错误信息</th>
+                <th>截图</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>信用卡</td>
+            <td style="color:green;font-weight:bold;">✅ PASSED</td>
+            <td>Stripe iframe</td>
+            <td>-</td>
+            <td><img src="./screenshots/credit_card_20260302_185416.png" alt="截图" style="max-width:100%; border-radius:5px;"></td>
+        </tr>
+        
+        <tr>
+            <td>支付宝</td>
+            <td style="color:green;font-weight:bold;">✅ PASSED</td>
+            <td>支付宝页面加载</td>
+            <td>-</td>
+            <td><img src="./screenshots/alipay_20260302_185442.png" alt="截图" style="max-width:100%; border-radius:5px;"></td>
+        </tr>
+        
+        </tbody>
+    </table>
+    
+    <div style="text-align:center; margin-top:30px; color:#999;">
+        <p>报告生成时间: 2026-03-02 18:54:45</p>
+    </div>
+</body>
+</html>

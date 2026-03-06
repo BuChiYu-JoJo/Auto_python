@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册功能自动化测试报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 32px; margin-bottom: 10px; }
+        .summary { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .summary-card { background: white; padding: 20px 40px; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .summary-card .label { color: #666; font-size: 14px; }
+        .summary-card .value { font-size: 24px; font-weight: bold; color: #28a745; }
+        .detail { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .detail h2 { margin-top: 0; color: #333; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        .detail-row { display: flex; padding: 12px 0; border-bottom: 1px solid #eee; }
+        .detail-label { width: 150px; color: #666; font-weight: bold; }
+        .detail-value { flex: 1; color: #333; }
+        .screenshot { margin-top: 20px; }
+        .screenshot img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .footer { text-align: center; color: white; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 注册功能自动化测试报告</h1>
+            <p>Thordata Dashboard</p>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <div class="label">测试状态</div>
+                <div class="value">✅ PASSED</div>
+            </div>
+            <div class="summary-card">
+                <div class="label">邮箱激活提示</div>
+                <div class="value" style="color: #28a745;">
+                    ✅ 有
+                </div>
+            </div>
+        </div>
+        
+        <div class="detail">
+            <h2>📋 测试详情</h2>
+            <div class="detail-row">
+                <div class="detail-label">测试名称</div>
+                <div class="detail-value">Thordata 注册测试</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">测试URL</div>
+                <div class="detail-value">https://dashboard.thordata.com/zh/register</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">测试邮箱</div>
+                <div class="detail-value">testzhuce@thordata.com</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">开始时间</div>
+                <div class="detail-value">2026-03-04 23:10:24</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">结束时间</div>
+                <div class="detail-value">2026-03-04 23:10:37</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">测试耗时</div>
+                <div class="detail-value">13.00秒</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">测试结果</div>
+                <div class="detail-value" style="color: #28a745; font-weight: bold;">✅ PASSED</div>
+            </div>
+            
+        <div class="detail-row">
+            <div class="detail-label">激活提示</div>
+            <div class="detail-value" style="color: #28a745;">✅ <div id="app" data-v-app=""><!----><!----><!----><!----><!----><div data-v-be932cc9=""><!----><div class="tmp-container" data-v-be932cc9=""><div class="tmp-container-header" data-v-be932cc9=""><div class="tmp-container-header-logo" data-v-be932cc9=""><img src="/img/login_logo.svg" alt="logo" data-v-be932cc9=""></div><div class="tmp-container-header-lang" data-v-be932cc9=""><div class="user_li li_lang" data-v-be932cc9=""><div class="pie2" data-v-be932cc9=""><img src="data:image/svg+xml,%3csvg%20width='18px'%20height='18px'%20viewBox='0%200%2018%2018'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%3e%3cg%20transform='translate(-1760,%20-18)'%3e%3cg%20transform='translate(250,%200)'%3e%3cg%20transform='translate(1191,%2015)'%3e%3cg%20transform='translate(319,%202)'%3e%3cg%20transform='translate(0,%201)'%3e%3crect%20fill='%23F5F7FA'%20opacity='0'%20x='0'%20y='0'%20width='18'%20height='18'%3e%3c/rect%3e%3cg%20transform='translate(2,%202)'%20stroke='%23171717'%3e%3cpath%20d='M9.68897,7.1053%20C9.68897,11.02946%208.53217,14.21056%207.10522,14.21056%20C5.67825,14.21056%204.52149,11.02946%204.52149,7.1053%20C4.52149,3.18117%205.67825,3.99999999e-05%207.10522,3.99999999e-05%20C8.53217,3.99999999e-05%209.68897,3.18117%209.68897,7.1053%20Z'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/path%3e%3cpath%20d='M7.10526,14.21056%20C11.02937,14.21056%2014.21057,11.02936%2014.21057,7.10527%20C14.21057,3.18114%2011.02937,0%207.10526,0%20C3.18114,0%200,3.18114%200,7.10527%20C0,11.02936%203.18114,14.21056%207.10526,14.21056%20Z'%20stroke-linejoin='round'%3e%3c/path%3e%3cline%20x1='0'%20y1='7.2512'%20x2='14.21057'%20y2='7.2512'%3e%3c/line%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="wallet" data-v-be932cc9=""><div class="pie2 ml5" data-v-be932cc9=""><div class="mr5" data-v-be932cc9="">简体中文</div><svg class="menu_icon" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-v-be932cc9=""><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square" data-v-be932cc9=""><g transform="translate(-304, -159)" stroke="#8293B0" data-v-be932cc9=""><g transform="translate(94, 144)" data-v-be932cc9=""><g transform="translate(210, 15)" data-v-be932cc9=""><polyline points="7.71428 4 4.85678 6.85714 2 4" data-v-be932cc9=""></polyline></g></g></g></g></svg></div></div><!----></div></div></div><div class="tmp-container-body" data-v-be932cc9=""><div class="left" data-v-be932cc9=""><div class="left-A" data-v-be932cc9=""><div class="left-A-title" data-v-be932cc9="">超20,000名用户已选择我们，立即开始！</div><div class="left-A-props" data-v-be932cc9=""><div class="left-A-props-item" data-v-be932cc9=""><img class="left-A-props-item-icon" src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.375%209.5L7.3125%2012.875L13.5%206.125'%20stroke='%2319D8AA'%20stroke-width='1.8'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Meta" data-v-be932cc9=""><div class="left-A-props-item-text" data-v-be932cc9="">灵活的定价</div></div><div class="left-A-props-item" data-v-be932cc9=""><img class="left-A-props-item-icon" src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.375%209.5L7.3125%2012.875L13.5%206.125'%20stroke='%2319D8AA'%20stroke-width='1.8'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Meta" data-v-be932cc9=""><div class="left-A-props-item-text" data-v-be932cc9="">无需信用卡</div></div><div class="left-A-props-item" data-v-be932cc9=""><img class="left-A-props-item-icon" src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.375%209.5L7.3125%2012.875L13.5%206.125'%20stroke='%2319D8AA'%20stroke-width='1.8'%20stroke-linecap='square'/%3e%3c/svg%3e" alt="Meta" data-v-be932cc9=""><div class="left-A-props-item-text" data-v-be932cc9="">24/7 团队支持</div></div></div></div><div class="left-B" data-v-be932cc9=""></div><div class="left-C" data-v-be932cc9=""><img class="left-C-item" src="/assets/31.BBbtAU1m-1772503741520.svg" alt="conductor" data-v-be932cc9=""><img class="left-C-item" src="/assets/32.DOeTpzKV-1772503741520.svg" alt="spider" data-v-be932cc9=""><img class="left-C-item" src="/assets/33.MAd5A6ip-1772503741520.svg" alt="mrscraper" data-v-be932cc9=""><img class="left-C-item" src="data:image/svg+xml,%3csvg%20width='100'%20height='30'%20viewBox='0%200%20100%2030'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.7945%207.18556L19.981%208.97151L19.9717%2014.4797C19.9974%2015.1541%2020.1136%2016.5997%2020.3721%2016.9874C20.6952%2017.4721%2021.5943%2020.0008%2025.7386%2019.8182C29.054%2019.6721%2029.8876%2016.5121%2029.8899%2014.9504H27.0311C27.024%2015.6341%2026.566%2016.9986%2024.7903%2016.9874C23.0146%2016.9762%2022.7439%2015.6247%2022.8306%2014.9504L28.3749%2011.8527V8.76554L22.7945%2011.7847V7.18556Z'%20fill='%23171717'/%3e%3cpath%20d='M33.46%2011.023L30.6132%2011.0024L30.6159%2019.7153H33.4672C33.3769%2018.3024%2033.3702%2015.2245%2034.0656%2014.216C34.761%2013.2074%2036.1818%2013.4799%2036.8053%2013.7422V11.023C35.454%2010.4759%2034.034%2011.4845%2033.4929%2012.0571L33.46%2011.023Z'%20fill='%23171717'/%3e%3cpath%20d='M37.7175%2011.0061H40.5707V19.7144H37.7175V11.0061Z'%20fill='%23171717'/%3e%3cpath%20d='M40.7078%208.63918C40.7078%209.54447%2039.9844%2010.2784%2039.092%2010.2784C38.1995%2010.2784%2037.4761%209.54447%2037.4761%208.63918C37.4761%207.73389%2038.1995%207%2039.092%207C39.9844%207%2040.7078%207.73389%2040.7078%208.63918Z'%20fill='%23171717'/%3e%3cpath%20d='M44.4001%2011.0306H41.3111L44.7871%2019.6798H47.489L50.9723%2011.0306H47.9653L46.2087%2015.6977L44.4001%2011.0306Z'%20fill='%23171717'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M55.0454%2010.8002C57.4876%2010.8004%2059.4669%2012.8752%2059.4669%2015.4342C59.4668%2017.9932%2057.4875%2020.0681%2055.0454%2020.0683C52.6031%2020.0683%2050.6228%2017.9933%2050.6227%2015.4342C50.6227%2012.875%2052.603%2010.8002%2055.0454%2010.8002ZM55.3464%2013.338C54.2425%2013.338%2053.3476%2014.2753%2053.3476%2015.432C53.3476%2016.5886%2054.2425%2017.526%2055.3464%2017.526C56.4503%2017.526%2057.3451%2016.5886%2057.3452%2015.432C57.3452%2014.2753%2056.4503%2013.338%2055.3464%2013.338Z'%20fill='%23171717'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M64.6727%2010.7702C66.7874%2010.7703%2068.502%2012.6988%2068.5021%2015.0777C68.5021%2017.4568%2066.7874%2019.3851%2064.6727%2019.3853C62.5579%2019.3853%2060.8433%2017.4569%2060.8433%2015.0777C60.8434%2012.6987%2062.558%2010.7702%2064.6727%2010.7702ZM65.4198%2013.163C64.4614%2013.163%2063.6844%2014.009%2063.6844%2015.0523C63.6846%2016.0953%2064.4616%2016.9404%2065.4198%2016.9404C66.3779%2016.9403%2067.1549%2016.0952%2067.1552%2015.0523C67.1552%2014.0091%2066.378%2013.1632%2065.4198%2013.163Z'%20fill='%23171717'/%3e%3cpath%20d='M69.7765%2011.0404H66.965C66.9284%2013.1401%2066.8771%2017.5789%2066.965%2018.5359C67.075%2019.7321%2066.6388%2020.4193%2065.8884%2020.9167C64.558%2021.6151%2063.5234%2020.8129%2063.1724%2020.3246C62.4354%2020.8371%2060.929%2021.8709%2060.8002%2021.9061C60.6391%2021.95%2061.1956%2022.4625%2061.5177%2022.77C61.8399%2023.0775%2063.3042%2024.3954%2066.1597%2023.8829C68.444%2023.4729%2069.5227%2020.9201%2069.7765%2019.6949V11.0404Z'%20fill='%23171717'/%3e%3cpath%20d='M57.2121%2010.9965H60.0383V19.6821H57.2121V10.9965Z'%20fill='%23171717'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M75.3787%2010.7703C77.9467%2010.7706%2080.0282%2012.8076%2080.0282%2015.3202C80.0282%2017.8329%2077.9467%2019.8699%2075.3787%2019.8702C72.8105%2019.8702%2070.7281%2017.833%2070.728%2015.3202C70.728%2012.8074%2072.8104%2010.7703%2075.3787%2010.7703ZM75.3787%2013.3115C74.3758%2013.3115%2073.5625%2014.2231%2073.5625%2015.3479C73.5625%2016.4728%2074.3758%2017.3844%2075.3787%2017.3844C76.3815%2017.3843%2077.1949%2016.4728%2077.1949%2015.3479C77.1949%2014.2231%2076.3815%2013.3115%2075.3787%2013.3115Z'%20fill='%23171717'/%3e%3c/svg%3e" alt="trivago" data-v-be932cc9=""><img class="left-C-item" src="/assets/35.NpS3tOFF-1772503741520.svg" alt="debunk" data-v-be932cc9=""><img class="left-C-item" src="/assets/36.Bpf3FB1l-1772503741520.svg" alt="wiser" data-v-be932cc9=""><img class="left-C-item" src="/assets/37.w-b58I1o-1772503741520.svg" alt="seon" data-v-be932cc9=""><img class="left-C-item" src="/assets/38.DVzG0JNZ-1772503741520.svg" alt="opt360" data-v-be932cc9=""></div><div class="left-B" data-v-be932cc9=""></div><div class="left-D" data-v-be932cc9=""><div class="left-D-text" data-v-be932cc9="">被4000多家<br>企业信赖</div><div class="left-D-imgs" data-v-be932cc9=""><div class="left-D-imgs-G2" data-v-be932cc9=""><img src="/assets/19.Acw5cxZD-1772503741520.svg" alt="" data-v-be932cc9=""></div><div class="left-D-imgs-capterra" data-v-be932cc9=""><img src="/assets/20.Chx8id2r-1772503741520.svg" alt="" data-v-be932cc9=""><img src="data:image/svg+xml,%3csvg%20width='76'%20height='15'%20viewBox='0%200%2076%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_14711_189430'%20style='mask-type:luminance'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='76'%20height='15'%3e%3cpath%20d='M75.3453%200.681152H0V14.579H75.3453V0.681152Z'%20fill='white'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_14711_189430)'%3e%3cpath%20d='M61.9937%206.30162L65.9757%205.67699L68.0838%202.16348L68.7865%203.72504L69.8015%204.74005L70.3481%205.75507V12.6259L68.0838%2011.4548L64.4142%2013.1725L64.8826%209.1905L61.9937%206.30162ZM1.24902%206.37969L5.23101%205.75507L7.26104%202.00732L9.13491%205.75507L13.3511%206.45777L10.3842%209.26858L11.0088%2013.3286L7.26104%2011.6109L3.51329%2013.3286L3.98175%209.34666L1.24902%206.37969ZM16.3962%206.37969L20.3781%205.75507L22.4082%202.00732L24.3601%205.75507L28.5763%206.45777L25.6094%209.26858L26.3121%2013.3286L22.4863%2011.6109L18.8166%2013.3286L19.2851%209.34666L16.3962%206.37969ZM31.8556%206.37969L35.8376%205.75507L37.8676%202.00732L39.7415%205.75507L43.9577%206.45777L40.9907%209.26858L41.6934%2013.3286L37.8676%2011.6109L34.1199%2013.3286L34.5883%209.34666L31.8556%206.37969ZM46.7685%206.37969L50.7505%205.75507L52.7805%202.00732L54.7325%205.75507L58.9487%206.37969L55.9817%209.1905L56.6844%2013.2506L52.8586%2011.5328L49.1889%2013.2506L49.6574%209.26858L46.7685%206.37969Z'%20fill='%23FF9D28'/%3e%3cpath%20d='M14.6005%206.06872L9.52547%205.36602L7.26122%200.993652L4.99695%205.36602L-0.078125%206.06872L3.59154%209.42608L2.73269%2014.2669L7.26122%2012.0027L11.7897%2014.2669L10.9309%209.42608L14.6005%206.06872ZM7.26122%2010.9096L4.1381%2012.5492L4.76271%209.19184L2.18614%206.8495L5.77773%206.30296L7.33929%203.25791L8.90085%206.30296L12.4924%206.8495L9.91586%209.19184L10.5405%2012.5492L7.26122%2010.9096ZM29.7477%206.06872L24.6726%205.36602L22.4083%200.993652L20.1441%205.36602L15.069%206.06872L18.7387%209.42608L17.8798%2014.2669L22.4083%2012.0027L26.9369%2014.1888L26.078%209.348L29.7477%206.06872ZM22.4864%2010.9096L19.3633%2012.5492L19.9879%209.19184L17.4114%206.8495L21.0029%206.30296L22.5645%203.25791L24.1261%206.30296L27.7177%206.8495L25.1411%209.19184L25.7657%2012.5492L22.4864%2010.9096ZM44.9729%206.06872L39.8978%205.36602L37.6336%200.993652L35.3693%205.36602L30.2942%206.06872L33.9639%209.42608L33.1831%2014.1888L37.7116%2011.9246L42.2402%2014.1888L41.3813%209.348L44.9729%206.06872ZM37.6336%2010.9096L34.5104%2012.5492L35.1351%209.19184L32.5585%206.8495L36.1501%206.30296L37.7116%203.25791L39.2732%206.30296L42.8648%206.8495L40.2882%209.19184L40.9128%2012.5492L37.6336%2010.9096ZM60.12%206.06872L55.045%205.36602L52.7807%200.993652L50.5164%205.36602L45.4414%206.06872L49.111%209.42608L48.2522%2014.2669L52.7807%2012.0027L57.3873%2014.1888L56.5284%209.348L60.12%206.06872ZM52.8588%2010.9096L49.7357%2012.5492L50.3603%209.19184L47.7837%206.8495L51.3753%206.30296L52.9369%203.25791L54.4984%206.30296L58.09%206.8495L55.5134%209.19184L56.1381%2012.5492L52.8588%2010.9096ZM75.3452%206.06872L70.2702%205.36602L68.0059%200.993652L65.7416%205.36602L60.6666%206.06872L64.3362%209.42608L63.4774%2014.2669L68.0059%2012.0027L72.5344%2014.2669L71.6756%209.42608L75.3452%206.06872ZM68.084%2010.9096L64.9609%2012.5492L65.5855%209.19184L63.0089%206.8495L66.6005%206.30296L68.1621%203.25791L69.7236%206.30296L73.3152%206.8495L70.7386%209.19184L71.3633%2012.5492L68.084%2010.9096Z'%20fill='%23FF9D28'/%3e%3c/g%3e%3c/svg%3e" alt="" data-v-be932cc9=""></div></div></div><div data-v-be932cc9=""></div></div><div class="right" data-v-be932cc9=""><div class="cont_box" data-v-be932cc9=""><div class="cont_box_conetnt" data-v-be932cc9=""><div class="login-container" data-v-38cc83c8=""><div class="login-container-body" data-v-38cc83c8=""><div class="login-container-body-A" data-v-38cc83c8="">验证您的邮箱地址</div><div class="login-container-body-D" data-v-38cc83c8=""><div class="login-container-body-D-item" data-v-38cc83c8=""><div class="login-container-body-D-item-label" data-v-38cc83c8="" style="margin-bottom: 30px; font-size: 16px;">我们已向您的邮箱地址发送确认链接 testzhuce@thordata.com</div><div class="txt_span1" data-v-38cc83c8="">您可以登录您的邮箱地址并查看邮件以继续注册的最后一步。您的确认链接有效期限为<i>24小时</i>。请尽快确认。</div></div></div><div class="login-container-body-E" data-v-38cc83c8=""><div class="login-container-body-E-btn" data-v-38cc83c8=""><!----><!----><!----><!----><!----> 未收到，重新发送</div></div></div><div class="login-container-fot" data-v-38cc83c8="">已有账号？ <a href="/zh/login" class="login-container-fot-btn" data-v-38cc83c8="">返回登录</a></div></div><!----><!----><div class="turnstile_authdom" data-v-9bb9b76d="" data-v-38cc83c8="" style="display: none;"><main data-v-9bb9b76d=""><i class="close" data-v-9bb9b76d=""></i><div class="cf-turnstile" data-v-9bb9b76d=""><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-dsdpy_response" style=""></div></div></main></div></div></div></div></div></div></div><div class="analyyicsbox" data-v-8506d240="" data-v-be932cc9=""></div><!----><!----></div></div>
+        </div>
+        
+        </div>
+        
+        <div class="detail">
+            <h2>📸 测试截图</h2>
+            <div class="screenshot">
+                <p><strong>注册页面</strong></p>
+                <img src="screenshots/register_page.png" alt="注册页面">
+            </div>
+            <div class="screenshot">
+                <p><strong>填写信息</strong></p>
+                <img src="screenshots/register_filled.png" alt="填写信息">
+            </div>
+            <div class="screenshot">
+                <p><strong>注册结果</strong></p>
+                <img src="screenshots/register_result.png" alt="注册结果">
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>报告生成时间: 2026-03-04 23:10:37</p>
+            <p>Powered by Playwright + Page Object Pattern</p>
+        </div>
+    </div>
+</body>
+</html>

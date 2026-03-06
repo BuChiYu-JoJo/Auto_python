@@ -1,0 +1,170 @@
+[
+  {
+    "name": "__lc_cid",
+    "value": "e29324a3-97ef-41e1-8fcd-fd4fe19bde69",
+    "domain": ".accounts.livechatinc.com",
+    "path": "/v2/customer/token"
+  },
+  {
+    "name": "__lc_cst",
+    "value": "ad21765821080c7acbb4a8c3b319a4257cb6aa0b05853f794d23b68c318bfd2cb9ccbbf19d8fbb9535b01287451ccb4044cff9ff69be75f6fae744819cb6",
+    "domain": ".accounts.livechatinc.com",
+    "path": "/v2/customer/token"
+  },
+  {
+    "name": "__lc_cid",
+    "value": "e29324a3-97ef-41e1-8fcd-fd4fe19bde69",
+    "domain": ".accounts.livechatinc.com",
+    "path": "/customer/token"
+  },
+  {
+    "name": "__lc_cst",
+    "value": "ad21765821080c7acbb4a8c3b319a4257cb6aa0b05853f794d23b68c318bfd2cb9ccbbf19d8fbb9535b01287451ccb4044cff9ff69be75f6fae744819cb6",
+    "domain": ".accounts.livechatinc.com",
+    "path": "/customer/token"
+  },
+  {
+    "name": "gr_attrib",
+    "value": "%7B%22gr_aid%22%3A%22gr_aid_d2u07mzr1lo01ddo%22%2C%22first_seen%22%3A1772716563552%2C%22last_seen%22%3A1772716563552%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_gr_attr",
+    "value": "%7B%22gr_aid%22%3A%22gr_aid_d2u07mzr1lo01ddo%22%2C%22first_seen%22%3A1772716563552%2C%22last_seen%22%3A1772716563552%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "gr_session",
+    "value": "%7B%22id%22%3A%22gr_sess_g8053p6oe8d9klp5%22%2C%22started_at%22%3A1772716563552%2C%22last_seen%22%3A1772716563552%2C%22page_views%22%3A1%2C%22landing_url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22entry_referrer%22%3Anull%2C%22last_page_url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22last_page_title%22%3A%22Thordata%20Overview%22%2C%22history_snapshot%22%3A%5B%7B%22url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22title%22%3A%22Thordata%20Overview%22%2C%22timestamp%22%3A%222026-03-05T13%3A16%3A03.552Z%22%7D%5D%2C%22visitor_id%22%3A%22gr_aid_d2u07mzr1lo01ddo%22%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "CLID",
+    "value": "eda557fbf3274637923205a42f3261e9.20260305.20270305",
+    "domain": "www.clarity.ms",
+    "path": "/"
+  },
+  {
+    "name": "_clck",
+    "value": "12bev8n%5E2%5Eg43%5E0%5E2255",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1772716566920.492522065192351443",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1093112046.1772716572",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "g_state",
+    "value": "{\"i_l\":0,\"i_ll\":1772716572013,\"i_b\":\"PmLQPZlFaARKVDwUF2qna+GWK8iCaPKZC2odXMNojFc\",\"i_e\":{\"enable_itp_optimization\":0}}",
+    "domain": "dashboard.thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1278903219.1772716574",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "test_cookie",
+    "value": "CheckForPermission",
+    "domain": ".doubleclick.net",
+    "path": "/"
+  },
+  {
+    "name": "MUID",
+    "value": "230DA441778569171998B352760C6802",
+    "domain": ".bing.com",
+    "path": "/"
+  },
+  {
+    "name": "MR",
+    "value": "0",
+    "domain": ".c.bing.com",
+    "path": "/"
+  },
+  {
+    "name": "SRM_B",
+    "value": "230DA441778569171998B352760C6802",
+    "domain": ".c.bing.com",
+    "path": "/"
+  },
+  {
+    "name": "SM",
+    "value": "C",
+    "domain": ".c.clarity.ms",
+    "path": "/"
+  },
+  {
+    "name": "MUID",
+    "value": "230DA441778569171998B352760C6802",
+    "domain": ".clarity.ms",
+    "path": "/"
+  },
+  {
+    "name": "MR",
+    "value": "0",
+    "domain": ".c.clarity.ms",
+    "path": "/"
+  },
+  {
+    "name": "ANONCHK",
+    "value": "0",
+    "domain": ".c.clarity.ms",
+    "path": "/"
+  },
+  {
+    "name": "_ga_SGH41GX5R1",
+    "value": "GS2.1.s1772716573$o1$g1$t1772716588$j45$l0$h0",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_ga_BNDR02CGLW",
+    "value": "GS2.1.s1772716573$o1$g1$t1772716588$j45$l0$h0",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "_clsk",
+    "value": "10kw1c1%5E1772716588841%5E2%5E1%5Ek.clarity.ms%2Fcollect",
+    "domain": ".thordata.com",
+    "path": "/"
+  },
+  {
+    "name": "YSC",
+    "value": "EysAVzKbe4M",
+    "domain": ".youtube.com",
+    "path": "/"
+  },
+  {
+    "name": "VISITOR_INFO1_LIVE",
+    "value": "LOOLHxmeKLs",
+    "domain": ".youtube.com",
+    "path": "/"
+  },
+  {
+    "name": "VISITOR_PRIVACY_METADATA",
+    "value": "CgJUSBIEGgAgZQ%3D%3D",
+    "domain": ".youtube.com",
+    "path": "/"
+  },
+  {
+    "name": "__Secure-ROLLOUT_TOKEN",
+    "value": "CI-J3pK9q4ftgQEQ3L2F9uuIkwMYq-T29-uIkwM%3D",
+    "domain": ".youtube.com",
+    "path": "/"
+  }
+]

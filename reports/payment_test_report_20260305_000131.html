@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试报告 - Thordata</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 16px; 
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 40px;
+            color: white;
+        }
+        .header h1 { 
+            font-size: 28px; 
+            margin-bottom: 10px;
+        }
+        .header .meta { 
+            opacity: 0.9; 
+            font-size: 14px;
+        }
+        .content { padding: 30px 40px; }
+        .summary { 
+            display: flex; 
+            gap: 20px; 
+            margin-bottom: 30px;
+        }
+        .summary-card { 
+            flex: 1;
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 12px; 
+            text-align: center;
+        }
+        .summary-card .label { color: #666; font-size: 14px; margin-bottom: 8px; }
+        .summary-card .value { font-size: 32px; font-weight: bold; }
+        .summary-card.passed .value { color: #28a745; }
+        .summary-card.failed .value { color: #dc3545; }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td { 
+            padding: 16px; 
+            text-align: left; 
+            border-bottom: 1px solid #eee;
+        }
+        th { 
+            background: #f8f9fa; 
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        td { font-size: 14px; }
+        
+        .status { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .status.pass { 
+            background: #d4edda; 
+            color: #155724;
+        }
+        .status.fail { 
+            background: #f8d7da; 
+            color: #721c24;
+        }
+        
+        .footer { 
+            background: #f8f9fa;
+            padding: 20px 40px;
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💳 Thordata 支付测试报告</h1>
+            <div class="meta">测试时间: 2026-03-05 00:01:31</div>
+        </div>
+        
+        <div class="content">
+            <div class="summary">
+                <div class="summary-card passed">
+                    <div class="label">通过</div>
+                    <div class="value">7</div>
+                </div>
+                <div class="summary-card failed">
+                    <div class="label">失败</div>
+                    <div class="value">0</div>
+                </div>
+                <div class="summary-card">
+                    <div class="label">跳过</div>
+                    <div class="value">1</div>
+                </div>
+            </div>
+            
+            <h2 style="margin-bottom: 20px; color: #333; font-size: 18px;">测试结果详情</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>测试项目</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>用户登录</td>
+                        <td><span class="status pass">✅ PASSED</span></td>
+                        <td>登录成功</td>
+                    </tr>
+                    <tr>
+                        <td>访问住宅代理页</td>
+                        <td><span class="status pass">✅ PASSED</span></td>
+                        <td>页面加载成功</td>
+                    </tr>
+                    <tr>
+                        <td>选择1GB套餐</td>
+                        <td><span class="status pass">✅ PASSED</span></td>
+                        <td>套餐选择成功</td>
+                    </tr>
+                    <tr>
+                        <td>点击继续结账</td>
+                        <td><span class="status pass">✅ PASSED</span></td>
+                        <td>进入结账页面</td>
+                    </tr>
+                    <tr>
+                        <td>信用卡支付</td>
+                        <td><span class="status pass">✅ 可用</span></td>
+                        <td>Stripe支付</td>
+                    </tr>
+                    <tr>
+                        <td>支付宝支付</td>
+                        <td><span class="status pass">✅ 可用</span></td>
+                        <td>Alipay</td>
+                    </tr>
+                    <tr>
+                        <td>PayPal支付</td>
+                        <td><span class="status fail">⚠️ 未找到</span></td>
+                        <td>页面未显示</td>
+                    </tr>
+                    <tr>
+                        <td>加密币支付</td>
+                        <td><span class="status pass">✅ 可用</span></td>
+                        <td>Crypto支付</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <span>Agent: OpenClaw Automation</span>
+            <span>执行时间: 2026-03-05 00:01:31</span>
+        </div>
+    </div>
+</body>
+</html>

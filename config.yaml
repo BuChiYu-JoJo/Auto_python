@@ -1,0 +1,14 @@
+# Playwright 测试项目配置
+
+[project]
+name = "Thordata Login Test"
+version = "1.0.0"
+
+[test]
+base_url = "https://dashboard.thordata.com"
+timeout = 30000
+screenshot_on_failure = true
+
+[credentials]
+username = "lightsong@thordata.com"
+password = "Zxs6412915@+"

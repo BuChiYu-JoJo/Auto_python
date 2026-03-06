@@ -1,0 +1,180 @@
+[
+  {
+    "name": "gr_attrib",
+    "value": "%7B%22gr_aid%22%3A%22gr_aid_i07rbiwk83ikspx9%22%2C%22first_seen%22%3A1772647289743%2C%22last_seen%22%3A1772647289743%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/",
+    "expires": 1788199289,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gr_attr",
+    "value": "%7B%22gr_aid%22%3A%22gr_aid_i07rbiwk83ikspx9%22%2C%22first_seen%22%3A1772647289743%2C%22last_seen%22%3A1772647289743%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/",
+    "expires": 1788199289,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "gr_session",
+    "value": "%7B%22id%22%3A%22gr_sess_ri8du98qo5b5kg39%22%2C%22started_at%22%3A1772647289743%2C%22last_seen%22%3A1772647289743%2C%22page_views%22%3A1%2C%22landing_url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22entry_referrer%22%3Anull%2C%22last_page_url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22last_page_title%22%3A%22Thordata%20Overview%22%2C%22history_snapshot%22%3A%5B%7B%22url%22%3A%22https%3A%2F%2Fdashboard.thordata.com%2Fzh%2Flogin%22%2C%22title%22%3A%22Thordata%20Overview%22%2C%22timestamp%22%3A%222026-03-04T18%3A01%3A29.743Z%22%7D%5D%2C%22visitor_id%22%3A%22gr_aid_i07rbiwk83ikspx9%22%7D",
+    "domain": "dashboard.thordata.com",
+    "path": "/",
+    "expires": 1772733692,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "CLID",
+    "value": "f16b9295291e4e2c98de46e4dc97285d.20260304.20270304",
+    "domain": "www.clarity.ms",
+    "path": "/",
+    "expires": 1804183290.38619,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1772647291002.281610792372847836",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1780423300,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_clck",
+    "value": "14zcrl2%5E2%5Eg42%5E0%5E2254",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1804183293,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.784787918.1772647298",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1780423298,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "g_state",
+    "value": "{\"i_l\":0,\"i_ll\":1772647299146,\"i_b\":\"9zvouT6xblavICsLw1lCjL+GLLsUoQhqLRaprVqluec\",\"i_e\":{\"enable_itp_optimization\":13}}",
+    "domain": "dashboard.thordata.com",
+    "path": "/",
+    "expires": 1788199299,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_clsk",
+    "value": "1hqwy3b%5E1772647301268%5E2%5E1%5Ev.clarity.ms%2Fcollect",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1772733701,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "YSC",
+    "value": "6dxIExrm_tA",
+    "domain": ".youtube.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://thordata.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "VISITOR_INFO1_LIVE",
+    "value": "VhsUBUg4K84",
+    "domain": ".youtube.com",
+    "path": "/",
+    "expires": 1788199303.244941,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://thordata.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "VISITOR_PRIVACY_METADATA",
+    "value": "CgJJVBIhEh0SGwsMDg8QERITFBUWFxgZGhscHR4fICEiIyQlJiBB",
+    "domain": ".youtube.com",
+    "path": "/",
+    "expires": 1788199303.244984,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://thordata.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1786207275.1772647304",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1807207304.513547,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_SGH41GX5R1",
+    "value": "GS2.1.s1772647304$o1$g0$t1772647304$j60$l0$h0",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1807207304.363999,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_BNDR02CGLW",
+    "value": "GS2.1.s1772647304$o1$g0$t1772647304$j60$l0$h0",
+    "domain": ".thordata.com",
+    "path": "/",
+    "expires": 1807207304.561883,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "test_cookie",
+    "value": "CheckForPermission",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1772648210.688656,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "__Secure-ROLLOUT_TOKEN",
+    "value": "COPq1bjgm_imFRC_grfm6YaTAxiNiYPq6YaTAw%3D%3D",
+    "domain": ".youtube.com",
+    "path": "/",
+    "expires": 1788199310.920406,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://thordata.com",
+    "_crHasCrossSiteAncestor": true
+  }
+]
