@@ -155,12 +155,12 @@ def run_registerAttempt(attempt_num):
                 page.click('.login-container-body-E-btn', timeout=5000)
             except:
                 try:
-                    page.click('button[type="submit"]', timeout=5000)
+                    page.click('text=注册', timeout=5000)
                 except:
                     try:
-                        page.click('button:has-text("注册")', timeout=5000)
-                    except:
                         page.keyboard.press('Enter')
+                    except:
+                        pass
             
             page.wait_for_timeout(10000)
             
