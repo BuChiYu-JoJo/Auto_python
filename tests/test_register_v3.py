@@ -25,25 +25,25 @@ CONFIG = {
         "username": "td-customer-MzsNH4f",
         "password": "EtXApbeko8bDT"
     },
-    
+
     # 注册账号
     "account": {
         "email": "test{random}@thordata.com",
         "password": "Zxs6412915@+"
     },
-    
+
     # 注册URL
     "register_url": "https://dashboard.thordata.com/zh/register",
-    
+
     # 重试配置
     "retry": {
         "max_attempts": 3,  # 最大重试次数
         "wait_between": 10   # 重试间隔秒数
     },
-    
+
     # 截图目录
     "screenshot_dir": "/home/test/ai-test/screenshots",
-    
+
     # 报告目录
     "report_dir": "/home/test/ai-test/reports"
 }
@@ -84,11 +84,11 @@ def run_registerAttempt(attempt_num):
     print(f"\n{'='*50}")
     print(f"第 {attempt_num} 次尝试")
     print(f"{'='*50}")
-    
+
     result = RegisterTestResult()
     result.attempts = attempt_num
     result.email = CONFIG["account"]["email"].format(random=random.randint(10000, 99999))
-    
+
     with sync_playwright() as p:
         # 每次都重新启动浏览器获取新IP
         browser = p.chromium.launch(
@@ -102,31 +102,31 @@ def run_registerAttempt(attempt_num):
                 '--window-size=1920,1080',
             ]
         )
-        
+
         context = browser.new_context(
             viewport={'width': 1920, 'height': 1080},
             locale='zh-CN',
             timezone_id='Asia/Shanghai',
         )
-        
+
         context.add_init_script("""
             Object.defineProperty(navigator, 'webdriver', {
                 get: () => undefined
             });
         """)
-        
+
         page = context.new_page()
-        
+
         try:
             print(f"测试邮箱: {result.email}")
-            
+
             # ===== 步骤1: 访问注册页 =====
             print("\n[步骤1] 访问注册页面...")
             page.goto(CONFIG["register_url"], wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(3000)
             print(f"  ✅ 页面标题: {page.title()}")
             take_screenshot(page, f"attempt{attempt_num}_page", "注册页")
-            
+
             # ===== 步骤2: 填写信息 =====
             print("\n[步骤2] 填写注册信息...")
             try:
@@ -134,44 +134,41 @@ def run_registerAttempt(attempt_num):
             except:
                 page.fill('input[type="text"]', result.email)
             random_delay(0.3, 0.8)
-            
+
             try:
                 page.fill('input[type="password"]', CONFIG["account"]["password"])
             except:
                 pass
             random_delay(0.3, 0.8)
-            
+
             take_screenshot(page, f"attempt{attempt_num}_filled", "填写完成")
-            
+
             # ===== 步骤3: 勾选协议 =====
+            print("\n[步骤3] 勾选协议...")
             try:
                 page.check('input[type="checkbox"]')
             except:
                 pass
             
+            # 等待一下让页面反应
+            page.wait_for_timeout(500)
+            
             # ===== 步骤4: 点击注册 =====
             print("\n[步骤4] 点击注册...")
-            try:
-                page.click('.login-container-body-E-btn', timeout=5000)
-            except:
-                try:
-                    page.click('text=注册', timeout=5000)
-                except:
-                    try:
-                        page.keyboard.press('Enter')
-                    except:
-                        pass
-            
+            # 先尝试直接按回车键提交（最可靠）
+            page.keyboard.press('Enter')
+            page.wait_for_timeout(2000)
+
             page.wait_for_timeout(10000)
-            
+
             # ===== 检查验证码 =====
             page_text = page.inner_text('body')
             page_content = page.content()
-            
+
             if '验证' in page_text or '人机' in page_text or 'turnstile' in page_content:
                 print("  ⚠️ 遇到验证码!")
                 take_screenshot(page, f"attempt{attempt_num}_captcha", "验证码")
-                
+
                 # 尝试点击验证
                 try:
                     page.click('text=人机验证', timeout=3000)
@@ -179,23 +176,23 @@ def run_registerAttempt(attempt_num):
                     page.wait_for_timeout(5000)
                 except:
                     pass
-                
+
                 # 等待验证
                 print("  ⏳ 等待验证完成...")
                 page.wait_for_timeout(15000)
-            
+
             take_screenshot(page, f"attempt{attempt_num}_submit", "提交后")
-            
+
             # ===== 检查结果 =====
             print("\n[步骤4] 检查结果...")
             page_text = page.inner_text('body')
-            
+
             activation_keywords = ['验证', '激活', '确认', '24小时', '已向']
             result.activation_hint = any(kw in page_text for kw in activation_keywords)
-            
+
             error_keywords = ['错误', '失败', '已存在', 'invalid', 'error', '请完成']
             has_error = any(kw in page_text.lower() for kw in error_keywords)
-            
+
             if result.activation_hint:
                 result.status = "PASSED"
                 print("  ✅ 注册成功 - 需要邮箱验证!")
@@ -214,16 +211,16 @@ def run_registerAttempt(attempt_num):
                 result.error_message = "无法确定结果"
                 print("  ⚠️ 结果未知")
                 take_screenshot(page, f"attempt{attempt_num}_unknown", "未知")
-            
+
         except Exception as e:
             print(f"\n❌ 异常: {e}")
             result.status = "ERROR"
             result.error_message = str(e)
             take_screenshot(page, f"attempt{attempt_num}_error", "异常")
-        
+
         finally:
             browser.close()
-    
+
     return result
 
 
@@ -231,30 +228,30 @@ def run_register_test():
     """运行注册测试（带重试）"""
     max_attempts = CONFIG["retry"]["max_attempts"]
     wait_time = CONFIG["retry"]["wait_between"]
-    
+
     for attempt in range(1, max_attempts + 1):
         result = run_registerAttempt(attempt)
-        
+
         if result.status == "PASSED":
             return result
-        
+
         if attempt < max_attempts:
             print(f"\n⚠️ 第 {attempt} 次尝试未通过，等待 {wait_time} 秒后重试...")
             print("   (代理会分配新IP)")
             time.sleep(wait_time)
-    
+
     return result
 
 
 def generate_report(result: RegisterTestResult):
     duration = (result.end_time - result.start_time).total_seconds()
     timestamp = result.start_time.strftime("%Y%m%d_%H%M%S")
-    
+
     status_class = "pass" if result.status == "PASSED" else "fail"
     status_text = "✅ 成功" if result.status == "PASSED" else "❌ 失败"
-    
+
     report_path = f"{CONFIG['report_dir']}/register_test_report_{timestamp}.html"
-    
+
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -303,13 +300,13 @@ def generate_report(result: RegisterTestResult):
                 <p><strong>代理:</strong> {CONFIG['proxy']['server']}</p>
             </div>
 """
-    
+
     if result.activation_hint and result.activation_message:
         html += f'            <div class="activation"><strong>📧 邮箱验证提示:</strong><br>{result.activation_message}</div>\n'
-    
+
     if result.error_message:
         html += f'            <div class="error"><strong>错误信息:</strong> {result.error_message}</div>\n'
-    
+
     html += f"""        </div>
         <div class="footer">
             Agent: OpenClaw Automation | {result.start_time.strftime('%Y-%m-%d %H:%M:%S')}
@@ -317,10 +314,10 @@ def generate_report(result: RegisterTestResult):
     </div>
 </body>
 </html>"""
-    
+
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(html)
-    
+
     return report_path
 
 
@@ -331,10 +328,10 @@ def main():
     print(f"最大尝试次数: {CONFIG['retry']['max_attempts']}")
     print(f"重试间隔: {CONFIG['retry']['wait_between']}秒")
     print("=" * 60 + "\n")
-    
+
     result = run_register_test()
     result.end_time = datetime.now()
-    
+
     print("\n" + "=" * 60)
     print("测试完成!")
     print("=" * 60)
@@ -343,10 +340,10 @@ def main():
     print(f"邮箱: {result.email}")
     if result.activation_message:
         print(f"提示: {result.activation_message[:50]}...")
-    
+
     report_path = generate_report(result)
     print(f"\n📊 报告: {report_path}")
-    
+
     return result
 
 
