@@ -150,14 +150,17 @@ def run_registerAttempt(attempt_num):
                 pass
             
             # ===== 步骤4: 点击注册 =====
-            print("\n[步骤3] 点击注册...")
+            print("\n[步骤4] 点击注册...")
             try:
-                page.click('button[type="submit"]', timeout=5000)
+                page.click('.login-container-body-E-btn', timeout=5000)
             except:
                 try:
-                    page.click('button:has-text("注册")', timeout=5000)
+                    page.click('button[type="submit"]', timeout=5000)
                 except:
-                    page.keyboard.press('Enter')
+                    try:
+                        page.click('button:has-text("注册")', timeout=5000)
+                    except:
+                        page.keyboard.press('Enter')
             
             page.wait_for_timeout(10000)
             
